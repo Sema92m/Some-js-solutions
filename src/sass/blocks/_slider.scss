@@ -1,0 +1,28 @@
+.controls {
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 400px;
+    background-color: rgb(182, 203, 222);
+}
+.slider img {
+    max-width: 100%;
+	object-fit: contain;
+}
+#btnPrev, #btnNext{
+	width: 5em;
+	
+}
+#btnPrev{
+	border-radius: 15px 0 0 15px;
+}
+#btnNext{
+	border-radius: 0 15px 15px 0;
+}
+.hidden {
+    display: none;
+}

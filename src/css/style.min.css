@@ -12,6 +12,106 @@
   background: linear-gradient(45deg, #92ffae, #fcff53);
 }
 
+.controls {
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 400px;
+  background-color: #b6cbde;
+}
+
+.slider img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+#btnPrev,
+#btnNext {
+  width: 5em;
+}
+
+#btnPrev {
+  border-radius: 15px 0 0 15px;
+}
+
+#btnNext {
+  border-radius: 0 15px 15px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.faq {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.faq-item {
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+
+.faq-title {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+}
+
+.faq-title:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.faq-title:hover {
+  background-color: #ddd;
+}
+
+.faq-input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  position: absolute;
+}
+
+.faq-input:checked ~ .faq-title {
+  background-color: #ddd;
+}
+
+.faq-input:checked ~ .faq-title:after {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #ddd transparent;
+}
+
+.faq-input:checked ~ .faq-text {
+  display: block;
+}
+
+.faq-text {
+  display: none;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
 body {
   max-width: 800px;
   margin: 0 auto;
@@ -22,7 +122,7 @@ body {
 .wrapper {
   width: 500px;
   min-height: 150px;
-  margin: 0 auto;
+  margin: 10px auto;
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
@@ -69,39 +169,5 @@ body {
 
 .btn-outline-primary {
   width: 30%;
-}
-
-.controls {
-  margin: 0 auto;
-  padding: 15px 0;
-  text-align: center;
-}
-
-.slider {
-  margin: 0 auto;
-  width: 400px;
-  background-color: #b6cbde;
-}
-
-.slider img {
-  max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-#btnPrev, #btnNext {
-  width: 5em;
-}
-
-#btnPrev {
-  border-radius: 15px 0 0 15px;
-}
-
-#btnNext {
-  border-radius: 0 15px 15px 0;
-}
-
-.hidden {
-  display: none;
 }
 /*# sourceMappingURL=style.min.css.map */

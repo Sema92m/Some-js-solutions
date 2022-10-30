@@ -11,17 +11,18 @@
 }
 .slider img {
     max-width: 100%;
-	object-fit: contain;
+	cursor: pointer;
 }
-#btnPrev, #btnNext{
-	width: 5em;
-	
+
+#btnPrev,
+#btnNext {
+    width: 5em;
 }
-#btnPrev{
-	border-radius: 15px 0 0 15px;
+#btnPrev {
+    border-radius: 15px 0 0 15px;
 }
-#btnNext{
-	border-radius: 0 15px 15px 0;
+#btnNext {
+    border-radius: 0 15px 15px 0;
 }
 .hidden {
     display: none;

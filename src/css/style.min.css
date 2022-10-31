@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,6 +11,148 @@
   width: 1140px;
   margin: 0 auto;
   background: linear-gradient(45deg, #92ffae, #fcff53);
+}
+
+.wrapper-checkbox {
+  margin-top: 20px;
+  margin-left: 150px;
+  text-align: start !important;
+}
+
+label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.form-group + .form-group {
+  margin-top: 5px;
+}
+
+.real-checkbox {
+  /* Скрываем реальную радио кнопку*/
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /*
+    display: none; - использовать нельзя, потому что не будет работать табуляция!
+    */
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #7e9bbd;
+  border-radius: 4px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.custom-checkbox::before {
+  content: "";
+  /* Рисуем круг */
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-image: url("./../icons/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* Выравниваем по центру */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  /* display: none; */
+}
+
+.real-checkbox:checked + .custom-checkbox::before {
+  /* display: block; */
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+/* Подсветка для радиокнопке в фокусе */
+.real-checkbox:focus + .custom-checkbox {
+  -webkit-box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+          box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+}
+
+.wrapper-radio {
+  margin-top: 20px;
+  margin-left: 150px;
+  text-align: start !important;
+}
+
+label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.form-group + .form-group {
+  margin-top: 5px;
+}
+
+.real-radio {
+  /* Скрываем реальную радио кнопку*/
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /*
+    display: none; - использовать нельзя, потому что не будет работать табуляция!
+    */
+}
+
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 2px solid #7e9bbd;
+  border-radius: 50%;
+  vertical-align: text-top;
+  margin-right: 5px;
+  top: 3px;
+}
+
+.custom-radio::before {
+  content: "";
+  /* Рисуем круг */
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #1647ed;
+  border-radius: 50%;
+  /* Выравниваем по центру */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  /* display: none; */
+}
+
+.real-radio:checked + .custom-radio::before {
+  /* display: block; */
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+/* Подсветка для радиокнопке в фокусе */
+.real-radio:focus + .custom-radio {
+  -webkit-box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+          box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
 }
 
 .controls {

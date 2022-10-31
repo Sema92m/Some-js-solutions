@@ -1,231 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/css/bootstrap.css" />
+        <link rel="stylesheet" href="./src/css/style.min.css" />
+        <link
+            rel="shortcut icon"
+            href="./src/icons/favicon.svg"
+            type="image/x-icon"
+        />
+        <title>New</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/bootstrap.css" />
-    <link rel="stylesheet" href="./src/css/style.min.css" />
-    <link rel="shortcut icon" href="./src/icons/favicon.svg" type="image/x-icon" />
-    <title>New</title>
-</head>
+    <body>
+        <!-- https://www.youtube.com/watch?v=D8OIb5LZYYE&list=PL1NBhQGGj46bU5rIaGApKPw4r8PZuCwDs&index=2 -->
 
-<body>
-    <!-- https://www.youtube.com/watch?v=D8OIb5LZYYE&list=PL1NBhQGGj46bU5rIaGApKPw4r8PZuCwDs&index=2 -->
+        <div class="main">
+            <div class="wrapper">
+                <!-- Show-Hide block -->
+                <h1 class="mb-4">Скрыть/Открыть блок</h1>
+                <button
+                    class="btn btn-outline-primary mb-3"
+                    id="button1"
+                    type="button"
+                >
+                    Открыть блок
+                </button>
+                <div class="card card-body content-hidden" id="content1">
+                    Блок с контентом. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Distinctio, maiores nulla nesciunt labore
+                    optio minus quibusdam excepturi voluptate atque iusto eaque
+                    enim, quos consectetur aliquam quasi repellendus vel quis
+                    sequi.
+                </div>
+            </div>
+            <div class="wrapper">
+                <h1 class="mb-4">Аккордеон</h1>
 
-    <div class="main">
+                <div class="list-group">
+                    <div
+                        class="list-group-item list-header"
+                        data-name="accordeon-title"
+                    >
+                        Блок 1. Заголовок
+                    </div>
+                    <div class="list-group-item list-content hidden">
+                        <h5>Блок 1. Контент</h5>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veritatis natus praesentium nulla illum mollitia unde
+                        quo reprehenderit deserunt, impedit eos nemo magnam
+                        soluta distinctio adipisci maxime tenetur voluptatem at
+                        qui.
+                    </div>
+
+                    <div
+                        class="list-group-item list-header"
+                        data-name="accordeon-title"
+                    >
+                        Блок 2. Заголовок
+                    </div>
+                    <div class="list-group-item list-content hidden">
+                        <h5>Блок 2. Контент</h5>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veritatis natus praesentium nulla illum mollitia unde
+                        quo reprehenderit deserunt, impedit eos nemo magnam
+                        soluta distinctio adipisci maxime tenetur voluptatem at
+                        qui.
+                    </div>
+
+                    <div
+                        class="list-group-item list-header"
+                        data-name="accordeon-title"
+                    >
+                        Блок 3. Заголовок
+                    </div>
+                    <div class="list-group-item list-content hidden">
+                        <h5>Блок 3.Контент</h5>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veritatis natus praesentium nulla illum mollitia unde
+                        quo reprehenderit deserunt, impedit eos nemo magnam
+                        soluta distinctio adipisci maxime tenetur voluptatem at
+                        qui.
+                    </div>
+
+                    <div
+                        class="list-group-item list-header"
+                        data-name="accordeon-title"
+                    >
+                        Блок 4. Заголовок
+                    </div>
+                    <div class="list-group-item list-content hidden">
+                        <h5>Блок 4.Контент</h5>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veritatis natus praesentium nulla illum mollitia unde
+                        quo reprehenderit deserunt, impedit eos nemo magnam
+                        soluta distinctio adipisci maxime tenetur voluptatem at
+                        qui.
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="wrapper">
-            <!-- Show-Hide block -->
-            <h1 class="mb-4">Скрыть/Открыть блок</h1>
-            <button class="btn btn-outline-primary mb-3" id="button1" type="button">
-                Открыть блок
+            <h1 class="mb-4">Табы</h1>
+
+            <ul class="list-group list-group-horizontal nmb-3">
+                <li class="list-group-item" data-tab="tab-1">Таб 1</li>
+                <li class="list-group-item" data-tab="tab-2">Таб 2</li>
+                <li class="list-group-item" data-tab="tab-3">Таб 3</li>
+            </ul>
+
+            <div class="card p-3" data-tab-content id="tab-1">
+                <h3>Таб 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minus, ducimus fugit corrupti culpa libero quam mollitia
+                    magni pariatur, quos soluta commodi porro voluptatem!
+                    Voluptate nobis veniam voluptatum, quisquam et obcaecati?
+                </p>
+            </div>
+
+            <div class="card p-3 hidden" data-tab-content id="tab-2">
+                <h3>Таб 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minus, ducimus fugit corrupti culpa libero quam mollitia
+                    magni pariatur, quos soluta commodi porro voluptatem!
+                    Voluptate nobis veniam voluptatum, quisquam et obcaecati?
+                </p>
+            </div>
+
+            <div class="card p-3 hidden" data-tab-content id="tab-3">
+                <h3>Таб 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minus, ducimus fugit corrupti culpa libero quam mollitia
+                    magni pariatur, quos soluta commodi porro voluptatem!
+                    Voluptate nobis veniam voluptatum, quisquam et obcaecati?
+                </p>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="mb-4">Модальное окно</h1>
+
+            <button
+                data-modal-button="modal-1"
+                class="btn btn-outline-primary mb-1"
+                type="button"
+            >
+                Открыть модальное окно №1
             </button>
-            <div class="card card-body content-hidden" id="content1">
-                Блок с контентом. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Distinctio, maiores nulla nesciunt labore
-                optio minus quibusdam excepturi voluptate atque iusto eaque
-                enim, quos consectetur aliquam quasi repellendus vel quis
-                sequi.
+
+            <button
+                data-modal-button="modal-2"
+                class="btn btn-outline-primary mb-1"
+                type="button"
+            >
+                Открыть модальное окно №2
+            </button>
+
+            <button
+                data-modal-button="modal-3"
+                class="btn btn-outline-primary mb-1"
+                type="button"
+            >
+                Открыть модальное окно №3
+            </button>
+
+            <div id="modal-1" data-modal class="fade-block hidden">
+                <div class="modal-window">
+                    <div class="card">
+                        <div class="card-header">Модальное окно №1</div>
+                        <div class="card-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Integer posuere erat a ante.
+                            </p>
+                            <button
+                                data-modal-close
+                                type="button"
+                                class="btn btn-dark"
+                            >
+                                Закрыть окно
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-2" data-modal class="fade-block hidden">
+                <div class="modal-window">
+                    <div class="card">
+                        <div class="card-header">Модальное окно №2</div>
+                        <div class="card-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Integer posuere erat a ante.
+                            </p>
+                            <button
+                                data-modal-close
+                                type="button"
+                                class="btn btn-dark"
+                            >
+                                Закрыть окно
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-3" data-modal class="fade-block hidden">
+                <div class="modal-window">
+                    <div class="card">
+                        <div class="card-header">Модальное окно №3</div>
+                        <div class="card-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Integer posuere erat a ante.
+                            </p>
+                            <button
+                                data-modal-close
+                                type="button"
+                                class="btn btn-dark"
+                            >
+                                Закрыть окно
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="wrapper">
-            <h1 class="mb-4">Аккордеон</h1>
+            <h2>Slider</h2>
+            <div class="slider" id="slider">
+                <img src="./src/img/01_slider.jpg" alt="Slide 01" />
+                <img src="./src/img/02_slider.jpg" alt="Slide 02" />
+                <img src="./src/img/03_slider.jpg" alt="Slide 03" />
+            </div>
 
-            <div class="list-group">
-                <div class="list-group-item list-header" data-name="accordeon-title">
-                    Блок 1. Заголовок
-                </div>
-                <div class="list-group-item list-content hidden">
-                    <h5>Блок 1. Контент</h5>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis natus praesentium nulla illum mollitia unde
-                    quo reprehenderit deserunt, impedit eos nemo magnam
-                    soluta distinctio adipisci maxime tenetur voluptatem at
-                    qui.
-                </div>
-
-                <div class="list-group-item list-header" data-name="accordeon-title">
-                    Блок 2. Заголовок
-                </div>
-                <div class="list-group-item list-content hidden">
-                    <h5>Блок 2. Контент</h5>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis natus praesentium nulla illum mollitia unde
-                    quo reprehenderit deserunt, impedit eos nemo magnam
-                    soluta distinctio adipisci maxime tenetur voluptatem at
-                    qui.
-                </div>
-
-                <div class="list-group-item list-header" data-name="accordeon-title">
-                    Блок 3. Заголовок
-                </div>
-                <div class="list-group-item list-content hidden">
-                    <h5>Блок 3.Контент</h5>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis natus praesentium nulla illum mollitia unde
-                    quo reprehenderit deserunt, impedit eos nemo magnam
-                    soluta distinctio adipisci maxime tenetur voluptatem at
-                    qui.
-                </div>
-
-                <div class="list-group-item list-header" data-name="accordeon-title">
-                    Блок 4. Заголовок
-                </div>
-                <div class="list-group-item list-content hidden">
-                    <h5>Блок 4.Контент</h5>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis natus praesentium nulla illum mollitia unde
-                    quo reprehenderit deserunt, impedit eos nemo magnam
-                    soluta distinctio adipisci maxime tenetur voluptatem at
-                    qui.
-                </div>
+            <div class="controls">
+                <button id="btnPrev">Назад</button>
+                <button id="btnNext">Вперед</button>
             </div>
         </div>
-    </div>
 
-    <div class="wrapper">
-        <h1 class="mb-4">Табы</h1>
-
-        <ul class="list-group list-group-horizontal nmb-3">
-            <li class="list-group-item" data-tab="tab-1">Таб 1</li>
-            <li class="list-group-item" data-tab="tab-2">Таб 2</li>
-            <li class="list-group-item" data-tab="tab-3">Таб 3</li>
-        </ul>
-
-        <div class="card p-3" data-tab-content id="tab-1">
-            <h3>Таб 1</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Minus, ducimus fugit corrupti culpa libero quam mollitia
-                magni pariatur, quos soluta commodi porro voluptatem!
-                Voluptate nobis veniam voluptatum, quisquam et obcaecati?
-            </p>
-        </div>
-
-        <div class="card p-3 hidden" data-tab-content id="tab-2">
-            <h3>Таб 2</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Minus, ducimus fugit corrupti culpa libero quam mollitia
-                magni pariatur, quos soluta commodi porro voluptatem!
-                Voluptate nobis veniam voluptatum, quisquam et obcaecati?
-            </p>
-        </div>
-
-        <div class="card p-3 hidden" data-tab-content id="tab-3">
-            <h3>Таб 3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Minus, ducimus fugit corrupti culpa libero quam mollitia
-                magni pariatur, quos soluta commodi porro voluptatem!
-                Voluptate nobis veniam voluptatum, quisquam et obcaecati?
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <h1 class="mb-4">Модальное окно</h1>
-
-        <button data-modal-button="modal-1" class="btn btn-outline-primary mb-1" type="button">
-            Открыть модальное окно №1
-        </button>
-
-        <button data-modal-button="modal-2" class="btn btn-outline-primary mb-1" type="button">
-            Открыть модальное окно №2
-        </button>
-
-        <button data-modal-button="modal-3" class="btn btn-outline-primary mb-1" type="button">
-            Открыть модальное окно №3
-        </button>
-
-        <div id="modal-1" data-modal class="fade-block hidden">
-            <div class="modal-window">
-                <div class="card">
-                    <div class="card-header">Модальное окно №1</div>
-                    <div class="card-body">
+        <div class="wrapper">
+            <h2>Accordion CSS ONLY! -no js-</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <input class="faq-input" type="checkbox" id="faq_1" />
+                    <label class="faq-title" for="faq_1"
+                        >Как лучше изучать HTML и CSS</label
+                    >
+                    <div class="faq-text">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Integer posuere erat a ante.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Maiores eum, ipsum. Voluptatum deleniti ut
+                            ipsa blanditiis, modi facere distinctio impedit
+                            illum fugiat ex vel, quasi sit, explicabo veniam
+                            nemo reprehenderit!
                         </p>
-                        <button data-modal-close type="button" class="btn btn-dark">
-                            Закрыть окно
-                        </button>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <input class="faq-input" type="checkbox" id="faq_2" />
+                    <label class="faq-title" for="faq_2"
+                        >Как лучше изучать HTML и CSS</label
+                    >
+                    <div class="faq-text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Maiores eum, ipsum. Voluptatum deleniti ut
+                            ipsa blanditiis, modi facere distinctio impedit
+                            illum fugiat ex vel, quasi sit, explicabo veniam
+                            nemo reprehenderit!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="modal-2" data-modal class="fade-block hidden">
-            <div class="modal-window">
-                <div class="card">
-                    <div class="card-header">Модальное окно №2</div>
-                    <div class="card-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Integer posuere erat a ante.
-                        </p>
-                        <button data-modal-close type="button" class="btn btn-dark">
-                            Закрыть окно
-                        </button>
-                    </div>
+        <div class="wrapper">
+            <h2>Custom radio button</h2>
+            <div class="wrapper-radio">
+                <div class="form-group">
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="coding notes"
+                            class="real-radio"
+                        />
+                        <span class="custom-radio"></span>
+                        Coding notes
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="travel notes"
+                            class="real-radio"
+                        />
+                        <span class="custom-radio"></span>
+                        Travel notes
+                    </label>
                 </div>
             </div>
         </div>
 
-        <div id="modal-3" data-modal class="fade-block hidden">
-            <div class="modal-window">
-                <div class="card">
-                    <div class="card-header">Модальное окно №3</div>
-                    <div class="card-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Integer posuere erat a ante.
-                        </p>
-                        <button data-modal-close type="button" class="btn btn-dark">
-                            Закрыть окно
-                        </button>
-                    </div>
+        <div class="wrapper">
+            <h2>Custom checkbox</h2>
+            <div class="wrapper-checkbox">
+                <div class="form-group">
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="coding notes"
+                            class="real-checkbox"
+                        />
+                        <span class="custom-checkbox"></span>
+                        Coding notes 1
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="coding notes"
+                            class="real-checkbox"
+                        />
+                        <span class="custom-checkbox"></span>
+                        Coding notes 2
+                    </label>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="wrapper">
-        <h2>Slider</h2>
-        <div class="slider" id="slider">
-            <img src="./src/img/01_slider.jpg" alt="Slide 01">
-            <img src="./src/img/02_slider.jpg" alt="Slide 02">
-            <img src="./src/img/03_slider.jpg" alt="Slide 03">
-        </div>
-
-        <div class="controls">
-            <button id="btnPrev">Назад</button>
-            <button id="btnNext">Вперед</button>
-        </div>
-    </div>
-
-
-    <div class="wrapper">
-        <h2>Accordion CSS ONLY! -no js-</h2>
-
-        <div class="faq">
-            <div class="faq-item">
-                <input class="faq-input" type="checkbox" id="faq_1">
-                <label class="faq-title" for="faq_1">Как лучше изучать HTML и CSS</label>
-                <div class="faq-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eum, ipsum. Voluptatum deleniti ut ipsa blanditiis, modi facere distinctio impedit illum fugiat ex vel, quasi sit, explicabo veniam nemo reprehenderit!</p>
-                </div>
-            </div>
-    
-            <div class="faq-item">
-                <input class="faq-input" type="checkbox" id="faq_2">
-                <label class="faq-title" for="faq_2">Как лучше изучать HTML и CSS</label>
-                <div class="faq-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eum, ipsum. Voluptatum deleniti ut ipsa blanditiis, modi facere distinctio impedit illum fugiat ex vel, quasi sit, explicabo veniam nemo reprehenderit!</p>
-                </div>
-            </div>
-        </div>
-
 
         <script src="./src/js/slider1.js"></script>
         <script src="./src/js/modal.js"></script>
@@ -233,6 +348,5 @@
         <script src="./src/js/accordion.js"></script>
         <script src="./src/js/hideblock.js"></script>
         <script src="./src/js/index.js"></script>
-</body>
-
+    </body>
 </html>

@@ -15,6 +15,7 @@
 
 .dropdown {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .dropdown__button {
@@ -291,7 +292,7 @@ label {
 
 .slider {
   margin: 0 auto;
-  width: 400px;
+  width: 350px;
   background-color: #b6cbde;
 }
 
@@ -383,20 +384,33 @@ label {
   font-size: 14px;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px 15px;
   text-align: center;
 }
 
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: auto;
+      grid-template: auto / auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(235, 235, 235, 0.938);
+}
+
 .wrapper {
-  width: 500px;
-  min-height: 150px;
-  margin: 10px auto;
+  width: 400px;
+  min-height: 250px;
   border: 1px solid black;
+  margin: 5px;
   padding: 20px;
-  margin-bottom: 20px;
   background: rgba(250, 255, 255, 0.856);
 }
 
@@ -440,5 +454,32 @@ body {
 
 .btn-outline-primary {
   width: 30%;
+}
+
+@media (min-width: 855px) {
+  .main {
+    background: #b3b3b3;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto auto;
+        grid-template: auto / auto auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main {
+    background: #b3b3b3;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template: auto / auto auto auto;
+  }
+}
+
+@media (min-width: 1720px) {
+  .main {
+    background: #615a5a;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template: auto / auto auto auto auto;
+  }
 }
 /*# sourceMappingURL=style.min.css.map */

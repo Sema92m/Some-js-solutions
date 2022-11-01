@@ -92,7 +92,7 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Minus, ducimus fugit corrupti culpa libero quam mollitia
-                    magni  
+                    magni
                 </p>
             </div>
 
@@ -110,7 +110,7 @@
                 <p>
                     Wapsum dolor sit amet consectetur adipisicing elit.
                     Minus, ducimus fugit corrupti culpa libero quam mollitia
-                    magni 
+                    magni
                 </p>
             </div>
         </div>
@@ -301,9 +301,93 @@
                 </div>
             </div>
         </div>
+        <div class="wrapper">
+            <h2>Multi menu</h2>
+            <div class="root">
+                <ul class="root-nav">
+                    <li><a href="http://google.com">Google</a></li>
+                    <li><span>Sub 2</span>
+                        <ul>
+                            <li><a href="#">Link10</a></li>
+                            <li><a href="#">Link20</a></li>
+                            <li><span>Sup40</span></a>
+                                <ul>
+                                    <li><a href="#">Link310</a></li>
+                                    <li><a href="#">Link320</a></li>
+                                    <li><a href="#">Link330</a></li>
+                                    <li><a href="#">Link340</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link40</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Link3</a></li>
+                    <li><span>Sup 4</span>
+                        <ul>
+                            <li><a href="#">Link410</a></li>
+                            <li><span>Sup 200</span>
+                                <ul>
+                                    <li><a href="#">Link10</a></li>
+                                    <li><a href="#">Link20</a></li>
+                                    <li><span>Sup 300</span></a>
+                                        <ul>
+                                            <li><a href="#">Link310</a></li>
+                                            <li><a href="#">Link320</a></li>
+                                            <li><a href="#">Link330</a></li>
+                                            <li><a href="#">Link340</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Link40</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Link430</a></li>
+                            <li><a href="#">Link440</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-timer" style="background-image: url('./src/img/newYear.jpg')">
+            <h2 style="padding: 5px;">Countdown timer</h2>
+            <div class="countdown-wrapper">
+                <h4 class="title-timer">до Нового Года осталось:</h4>
+                <div id="year" class="year"></div>
+                <div class="countdown" id=countdown>
+                    <div class="time">
+                        <h2 id="days">00</h2>
+                        <small>дней</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="hours">00</h2>
+                        <small>часов</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="minutes">00</h2>
+                        <small>минут</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="seconds">00</h2>
+                        <small>секунд</small>
+                    </div>
+                </div>
+                <div class="preloader" id="preloader">
+                    <div class="lds-ripple"><div></div><div></div></div>
+                </div>
+
+
+
+        </div>
+
+
+
+
+
     </div>
+    <!--CONTAINER-->
 
-
+    <script src="./src/js/countDownTimer.js"></script>
+    <script src="./src/js/multiMenu.js"></script>
     <script src="./src/js/dropdownListJS.js"></script>
     <script src="./src/js/slider1.js"></script>
     <script src="./src/js/modal.js"></script>

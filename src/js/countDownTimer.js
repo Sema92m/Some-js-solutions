@@ -27,8 +27,6 @@ function updateCounter() {
 	// Секундк всего, далее остаток от преобразования в минуты, секунд осталось
 	const secondsLeft = Math.floor(diff / 1000) % 60;
 
-	console.log(daysLeft, hoursLeft, minutesLeft, secondsLeft);
-
 	days.innerText = daysLeft;
 	hours.innerText = hoursLeft < 10 ? '0' + hoursLeft : hoursLeft;
 	minutes.innerText = minutesLeft < 10 ? '0' + minutesLeft : minutesLeft;

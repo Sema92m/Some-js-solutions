@@ -1,6 +1,5 @@
-@import 'base/mixins';
-@import 'base/variables';
-
+@import "base/mixins";
+@import "base/variables";
 
 * {
     box-sizing: border-box;
@@ -9,22 +8,33 @@
     scroll-behavior: smooth;
 }
 
-
-.container {
-    width: 1140px;
-    margin: 0 auto;
-    background: linear-gradient(45deg, rgb(146, 255, 174),rgb(252, 255, 83));
+body {
+    text-align: center;
+}
+.container-main {
+    display: grid;
+    grid-template: auto / auto;
+    justify-content: center;
+    background: rgba(235, 235, 235, 0.938);
+}
+.wrapper {
+    width: 360px;
+    min-height: 250px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 20px;
+    background: rgba(250, 255, 255, 0.856);
 }
 
+@import "blocks/dateOfBirth";
+@import "blocks/counDownTimer";
+@import "blocks/multiMenu";
+@import "blocks/dropdownListJS";
+@import "blocks/selectCustom";
+@import "blocks/checkboxCustom";
+@import "blocks/radioButton";
+@import "blocks/slider";
+@import "blocks/faq";
+@import "blocks/modal";
 
-@import 'blocks/counDownTimer';
-@import 'blocks/multiMenu';
-@import 'blocks/dropdownListJS';
-@import 'blocks/selectCustom';
-@import 'blocks/checkboxCustom';
-@import 'blocks/radioButton';
-@import 'blocks/slider';
-@import 'blocks/faq';
-@import 'blocks/main';
-
-@import 'blocks/media';
+@import "blocks/media";

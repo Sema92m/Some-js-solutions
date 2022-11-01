@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="main">
+    <div class="container-main">
         <div class="wrapper">
             <!-- Show-Hide block -->
             <h1 class="mb-4">Скрыть/Открыть блок</h1>
@@ -372,20 +372,80 @@
                     </div>
                 </div>
                 <div class="preloader" id="preloader">
-                    <div class="lds-ripple"><div></div><div></div></div>
+                    <div class="lds-ripple">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <h2>How long do you live?</h2>
+            <div class="input-wrapper">
+                <h3 class="input-descr">Write your date of birth</h3>
+                <div>
+                    <input id="input-date" class="form-control" type="date"/>
+                    <span id="startDateSelected"></span>
+                </div>
+                
+                <button class="input-btn">Convert date</button>
+            </div>
+            <div class="live-time-container">
+                <h3 class="live-time-descr">You Live:</h3>
+                <div class="livetime">
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">years</h4>
+                        <div class="livetime-years time"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">days</h4>
+                        <div class="livetime-days time"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">hours</h4>
+                        <div class="livetime-hours time"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">minutes</h4>
+                        <div class="livetime-minutes time"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">seconds</h4>
+                        <div class="livetime-seconds time"></div>
+                    </div>
                 </div>
 
-
-
+                <div class="totallivetime">
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">total days</h4>
+                        <div class="total-days time time-small"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">total hours</h4>
+                        <div class="total-hours time time-small"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">total minutes</h4>
+                        <div class="total-minutes time time-small"></div>
+                    </div>
+                    <div class="livetime-unit">
+                        <h4 class="livetime-unit-descr">total seconds</h4>
+                        <div class="total-seconds time time-small"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
 
-
+        <!--MAIN-->
 
     </div>
-    <!--CONTAINER-->
+    <!--MAIN-->
 
+    <script src="./src/js/dateOfBirth.js"></script>
     <script src="./src/js/countDownTimer.js"></script>
     <script src="./src/js/multiMenu.js"></script>
     <script src="./src/js/dropdownListJS.js"></script>

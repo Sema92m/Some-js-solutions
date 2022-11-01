@@ -7,10 +7,90 @@
   scroll-behavior: smooth;
 }
 
-.container {
-  width: 1140px;
-  margin: 0 auto;
-  background: linear-gradient(45deg, #92ffae, #fcff53);
+body {
+  text-align: center;
+}
+
+.container-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: auto;
+      grid-template: auto / auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(235, 235, 235, 0.938);
+}
+
+.wrapper {
+  width: 360px;
+  min-height: 250px;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 20px;
+  background: rgba(250, 255, 255, 0.856);
+}
+
+.input-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.input-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.live-time-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.livetime, .totallivetime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.livetime-unit-descr {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 18px;
+}
+
+.time-small {
+  font-size: 15px;
 }
 
 .wrapper-timer {
@@ -25,11 +105,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
-  margin: 0;
   overflow: hidden;
 }
 
@@ -43,6 +119,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 30px;
 }
 
 .title-timer {
@@ -56,7 +133,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 180px;
+  font-size: 170px;
   line-height: 1;
   z-index: -1;
   opacity: 0.3;
@@ -70,7 +147,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .time {
@@ -87,16 +164,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px;
+  margin: 10px;
 }
 
 .time h2 {
   margin: 0 0 10px;
-  font-size: 20px;
+  font-size: 48px;
 }
 
 .time small {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 /* Preloader */
@@ -468,7 +545,7 @@ label {
 
 .slider {
   margin: 0 auto;
-  width: 350px;
+  width: 300px;
   background-color: #b6cbde;
 }
 
@@ -560,36 +637,6 @@ label {
   font-size: 14px;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  text-align: center;
-}
-
-.main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-  -ms-grid-columns: auto;
-      grid-template: auto / auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: rgba(235, 235, 235, 0.938);
-}
-
-.wrapper {
-  width: 400px;
-  min-height: 250px;
-  border: 1px solid black;
-  margin: 5px;
-  padding: 20px;
-  background: rgba(250, 255, 255, 0.856);
-}
-
 .list-header {
   font-weight: 700;
 }
@@ -632,8 +679,17 @@ body {
   width: 30%;
 }
 
+@media (min-width: 360px) {
+  .container-main {
+    background: #b3b3b3;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto;
+        grid-template: auto / auto;
+  }
+}
+
 @media (min-width: 855px) {
-  .main {
+  .container-main {
     background: #b3b3b3;
     -ms-grid-rows: auto;
     -ms-grid-columns: auto auto;
@@ -642,7 +698,7 @@ body {
 }
 
 @media (min-width: 1280px) {
-  .main {
+  .container-main {
     background: #b3b3b3;
     -ms-grid-rows: auto;
     -ms-grid-columns: auto auto auto;
@@ -651,7 +707,7 @@ body {
 }
 
 @media (min-width: 1720px) {
-  .main {
+  .container-main {
     background: #615a5a;
     -ms-grid-rows: auto;
     -ms-grid-columns: auto auto auto auto;

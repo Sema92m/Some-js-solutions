@@ -12,8 +12,8 @@ body {
     text-align: center;
 }
 .container-main {
-    display: grid;
-    grid-template: auto / auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background: rgba(235, 235, 235, 0.938);
 }
@@ -26,6 +26,10 @@ body {
     background: rgba(250, 255, 255, 0.856);
 }
 
+
+
+
+@import "blocks/greenBlock";
 @import "blocks/dateOfBirth";
 @import "blocks/counDownTimer";
 @import "blocks/multiMenu";

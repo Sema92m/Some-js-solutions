@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/css/bootstrap.css" />
     <link rel="stylesheet" href="./src/css/style.min.css" />
     <link rel="shortcut icon" href="./src/icons/favicon.svg" type="image/x-icon" />
-    <title>New</title>
+    <title>My js tips</title>
 </head>
 
 <body>
@@ -118,15 +118,15 @@
             <h1 class="mb-4">Модальное окно</h1>
 
             <button data-modal-button="modal-1" class="btn btn-outline-primary mb-1" type="button">
-                Открыть модальное окно №1
+                Открыть окно №1
             </button>
 
             <button data-modal-button="modal-2" class="btn btn-outline-primary mb-1" type="button">
-                Открыть модальное окно №2
+                Открыть окно №2
             </button>
 
             <button data-modal-button="modal-3" class="btn btn-outline-primary mb-1" type="button">
-                Открыть модальное окно №3
+                Открыть окно №3
             </button>
 
             <div id="modal-1" data-modal class="fade-block hidden">
@@ -382,14 +382,15 @@
 
 
         <div class="wrapper">
-            <h2>How long do you live?</h2>
+            <!-- <h2>How long do you live?</h2> -->
             <div class="input-wrapper">
                 <h3 class="input-descr">Write your date of birth</h3>
                 <div>
-                    <input id="input-date" class="form-control" type="date"/>
+                    <input id="input-date" class="form-control form-control--date-of-birth" type="date"
+                        style="width: 180px;" />
                     <span id="startDateSelected"></span>
                 </div>
-                
+
                 <button class="input-btn">Convert date</button>
             </div>
             <div class="live-time-container">
@@ -437,14 +438,25 @@
                 </div>
             </div>
         </div>
+        <div class="wrapper">
+            <div>
+                <div class="block" data-descr="Some text write here">Hover me</div>
+            </div>
+            <div class="mt-3">
+                <input id="file" type="file">
+                <label class="label-file" for="file">Put to start download</label>
+            </div>
+            <div class="mt-3">
+                <input type="password">
+            </div>
+        </div>
+    
 
 
 
-        <!--MAIN-->
-
+    <!--MAIN-->
     </div>
     <!--MAIN-->
-
     <script src="./src/js/dateOfBirth.js"></script>
     <script src="./src/js/countDownTimer.js"></script>
     <script src="./src/js/multiMenu.js"></script>

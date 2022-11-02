@@ -1,24 +1,6 @@
-@media (min-width: 360px) {
-    .container-main {
-        background: rgb(179, 179, 179);
-        grid-template: auto / auto;
-    }
-}
-@media (min-width: 855px) {
-    .container-main {
-        background: rgb(179, 179, 179);
-        grid-template: auto / auto auto;
-    }
-}
-@media (min-width: 1280px) {
-    .container-main {
-        background: rgb(179, 179, 179);
-        grid-template: auto / auto auto auto;
-    }
-}
-@media (min-width: 1720px) {
-    .container-main {
-        background: rgb(97, 90, 90);
-        grid-template: auto / auto auto auto auto;
-    }
-}
+// @media (min-width: 360px) {
+//     .container-main {
+//         background: rgb(179, 179, 179);
+//         grid-template: auto / auto;
+//     }
+

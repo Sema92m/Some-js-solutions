@@ -12,11 +12,11 @@ body {
 }
 
 .container-main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-  -ms-grid-columns: auto;
-      grid-template: auto / auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -30,6 +30,37 @@ body {
   margin: 5px;
   padding: 20px;
   background: rgba(250, 255, 255, 0.856);
+}
+
+.block {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 30px auto;
+}
+
+.block:hover::after {
+  content: attr(data-descr);
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 100%;
+  background-color: grey;
+}
+
+#file {
+  display: none;
+}
+
+.label-file {
+  padding: 10px;
+  border: 2px black dashed;
+}
+
+input[type=password] {
+  border: 3px solid red;
 }
 
 .input-wrapper {
@@ -47,7 +78,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 15px 0;
+  margin-bottom: 15px;
   font-size: 20px;
 }
 
@@ -91,6 +122,11 @@ body {
 
 .time-small {
   font-size: 15px;
+}
+
+.form-control--date-of-birth:hover, .input-btn {
+  -webkit-box-shadow: 5px 5px 5px grey;
+          box-shadow: 5px 5px 5px grey;
 }
 
 .wrapper-timer {
@@ -677,41 +713,5 @@ label {
 
 .btn-outline-primary {
   width: 30%;
-}
-
-@media (min-width: 360px) {
-  .container-main {
-    background: #b3b3b3;
-    -ms-grid-rows: auto;
-    -ms-grid-columns: auto;
-        grid-template: auto / auto;
-  }
-}
-
-@media (min-width: 855px) {
-  .container-main {
-    background: #b3b3b3;
-    -ms-grid-rows: auto;
-    -ms-grid-columns: auto auto;
-        grid-template: auto / auto auto;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container-main {
-    background: #b3b3b3;
-    -ms-grid-rows: auto;
-    -ms-grid-columns: auto auto auto;
-        grid-template: auto / auto auto auto;
-  }
-}
-
-@media (min-width: 1720px) {
-  .container-main {
-    background: #615a5a;
-    -ms-grid-rows: auto;
-    -ms-grid-columns: auto auto auto auto;
-        grid-template: auto / auto auto auto auto;
-  }
 }
 /*# sourceMappingURL=style.min.css.map */

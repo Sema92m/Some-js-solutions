@@ -1,0 +1,26 @@
+.block {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 30px auto;
+}
+.block:hover::after {
+    content: attr(data-descr);
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 100%;
+    background-color: grey;
+}
+#file {
+    display: none;
+}
+.label-file {
+    padding: 10px;
+    border: 2px black dashed;
+}
+input[type=password] {
+	border: 3px solid red;
+}

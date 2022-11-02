@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: 15px 0;
+	margin-bottom: 15px;
 	font-size: 20px;
 }
 .input-btn{
@@ -35,4 +35,7 @@ flex-direction: column;
 }
 .time-small{
 	font-size: 15px;
+}
+.form-control--date-of-birth:hover, .input-btn {
+	box-shadow: 5px 5px 5px grey;
 }

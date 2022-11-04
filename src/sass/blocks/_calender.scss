@@ -1,0 +1,69 @@
+.wrapper-clock {
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calender {
+    background-color: black;
+    color: lightgray;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.month {
+    width: 100%;
+    height: 100px;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.date-title {
+    text-transform: uppercase;
+}
+.calender-descr {
+    font-size: 16px;
+}
+.weekdays {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 0 5px;
+}
+
+.weekdays div {
+	font-size: 15px;
+	font-weight: bold;
+	width: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+	
+
+}
+.days {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	align-items: center;
+	padding: 0 5px 10px 5px;
+}
+.days div {
+	font-size: 15px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.days div:hover:not(.empty){
+	cursor: pointer;
+	border: 2px solid gray;
+}
+
+.today {
+	background-color: lightseagreen;
+	border-radius: 5px;
+}

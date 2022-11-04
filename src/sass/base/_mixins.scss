@@ -1,7 +1,5 @@
-@mixin first {
-	&::before {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		}
-}
+@mixin displayFlex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} // usage: paste in css @include df;

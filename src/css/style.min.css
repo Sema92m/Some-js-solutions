@@ -32,6 +32,265 @@ body {
   background: rgba(250, 255, 255, 0.856);
 }
 
+.display-none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.double-landing-page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  position: relative;
+}
+
+.double-landing-page-container h4 {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: aliceblue;
+  -webkit-backdrop-filter: brightness(0.5);
+          backdrop-filter: brightness(0.5);
+  letter-spacing: 2px;
+}
+
+.split {
+  width: 50%;
+  top: 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.split.left {
+  position: absolute;
+  left: 0;
+  background: lightcoral;
+  background-image: url("./../img/iphone.png");
+  background-position: -20px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right {
+  position: absolute;
+  right: 0;
+  background: lightblue;
+  background-image: url("./../img/sumsung.png");
+  background-position: -21px 85px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.double-landing-page-btn {
+  background-color: #a7a7a7;
+  color: white;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.5s background-color;
+  transition: 0.5s background-color;
+  line-height: 1;
+}
+
+.double-landing-page-btn:hover {
+  background-color: #d8d8d8;
+  -webkit-box-shadow: 2px 2px 4px gray;
+          box-shadow: 2px 2px 4px gray;
+}
+
+.active-left .left, .active-right .right {
+  width: 70%;
+}
+
+.active-left .right, .active-right .left {
+  width: 30%;
+}
+
+.left, .right {
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.wrapper-selector-menu {
+  background: linear-gradient(135deg, purple 10%, orange 80%);
+}
+
+.selector-menu {
+  background-color: lightgray;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  opacity: 0.3;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.selector-menu p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.social-lists {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  background-color: lightgray;
+  opacity: 0.4;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.social-lists li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: padding 0.2s linear;
+  transition: padding 0.2s linear;
+}
+
+.social-lists li:hover {
+  background: darkgray;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+li p {
+  margin: 0;
+}
+
+.social-lists li .fa-brands {
+  margin: 0 10px;
+}
+
+.fa-chevron-down {
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+.selector-menu-rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.wrapper-slider-rotate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  height: 350px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  width: 135px;
+  height: 500px;
+  margin-top: 30px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  -webkit-transform: perspective(1500px) rotateY(0deg);
+          transform: perspective(1500px) rotateY(0deg);
+}
+
+.img-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+          transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+}
+
+.img-container span img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btn-comtainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.btn-prev,
+.btn-next {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
 .wrapper-preloader {
   display: -webkit-box;
   display: -ms-flexbox;

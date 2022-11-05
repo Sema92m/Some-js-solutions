@@ -26,9 +26,18 @@ body {
     background: rgba(250, 255, 255, 0.856);
 }
 
+.display-none {
+    display: none;
+}
+.hidden {
+    visibility: hidden
+}
 
 
 
+@import "blocks/doubleLanding";
+@import "blocks/selectorMenu";
+@import "blocks/sliderRotate";
 @import "blocks/preloader";
 @import "blocks/mousePosition";
 @import "blocks/calender";
@@ -44,5 +53,4 @@ body {
 @import "blocks/slider";
 @import "blocks/faq";
 @import "blocks/modal";
-
 @import "blocks/media";

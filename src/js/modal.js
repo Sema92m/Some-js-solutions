@@ -2,6 +2,8 @@
 // const modalButton = document.querySelector("[data-modal-button]");
 // const buttonClose = document.querySelector("[data-modal-close]")
 // const modal = document.querySelector("[data-modal]");
+
+
 // modalButton.addEventListener('click', function() {
 // 	modal.classList.remove('hidden');
 // });
@@ -16,6 +18,7 @@
 // });
 //base code for 1 modal window
 
+
 //code for more then 1 modal window
 const modalButtons = document.querySelectorAll("[data-modal-button]");
 const modalCloseButtons = document.querySelectorAll("[data-modal-close]");
@@ -29,11 +32,9 @@ modalButtons.forEach(function (item) {
 
 		//находим внутри открываемый блок модалки modal-window
 		// и запрещаем ему передавать клики на верхние родительские элементы
-        modal
-            .querySelector(".modal-window")
-            .addEventListener("click", function (e) {
-                e.stopPropagation();
-            });
+        // modal.querySelector(".modal-window").addEventListener("click", function (e) {
+        //         e.stopPropagation();
+        //     });
     });
 });
 

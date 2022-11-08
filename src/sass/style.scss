@@ -26,15 +26,20 @@ body {
     background: rgba(250, 255, 255, 0.856);
 }
 
+
+.display-block-flex {
+    display: flex;
+}
+.hidden {
+    display: none;
+}
+
 .display-none {
     display: none;
 }
-.hidden {
-    visibility: hidden
-}
 
-
-
+@import "blocks/blurredbackgrPopup";
+@import "blocks/buttonRippleEffect";
 @import "blocks/doubleLanding";
 @import "blocks/selectorMenu";
 @import "blocks/sliderRotate";

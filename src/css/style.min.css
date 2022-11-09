@@ -46,6 +46,56 @@ body {
   display: none;
 }
 
+.wrapper-image-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.image-slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.btn-image-slider--next,
+.btn-image-slider--prev {
+  position: absolute;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  opacity: 0.5;
+}
+
+.btn-image-slider--next:hover,
+.btn-image-slider--prev:hover {
+  opacity: 1;
+}
+
+.btn-image-slider--next {
+  right: 2em;
+}
+
+.btn-image-slider--prev {
+  left: 2em;
+}
+
 .wrapper-popup {
   position: relative;
 }

@@ -1,0 +1,32 @@
+.wrapper-image-slider {
+    @include displayFlex;
+    position: relative;
+
+}
+
+.image-slider-container {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out;
+	overflow: hidden;
+}
+.btn-image-slider--next,
+.btn-image-slider--prev {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+}
+.btn-image-slider--next:hover,
+.btn-image-slider--prev:hover {
+    opacity: 1;
+}
+.btn-image-slider--next {
+    right: 2em;
+}
+.btn-image-slider--prev {
+    left: 2em;
+}

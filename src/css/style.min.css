@@ -46,6 +46,96 @@ body {
   display: none;
 }
 
+.wrapper-darkModeToggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition: background 0.4s linear;
+  transition: background 0.4s linear;
+}
+
+.label-darkMode {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#darkModeToggle {
+  visibility: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 3px;
+  left: 3px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: toggleOff 0.3s linear forwards;
+          animation: toggleOff 0.3s linear forwards;
+}
+
+#darkModeToggle:checked + .label-darkMode .circle {
+  -webkit-animation: toggleOn 0.3s linear forwards;
+          animation: toggleOn 0.3s linear forwards;
+  background-color: black;
+}
+
+@-webkit-keyframes toggleOn {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+}
+
+@keyframes toggleOn {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+}
+
+@-webkit-keyframes toggleOff {
+  0% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .wrapper-image-slider {
   display: -webkit-box;
   display: -ms-flexbox;

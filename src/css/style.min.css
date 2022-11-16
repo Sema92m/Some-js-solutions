@@ -46,6 +46,36 @@ body {
   display: none;
 }
 
+.h2-textOverlay {
+  font-size: 20px;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.h2-textOverlay:hover {
+  overflow: visible;
+}
+
+.wrapper-mixBlendMode {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-mixBlendMode {
+  width: 100%;
+}
+
+.h2-mixBlendMode {
+  position: absolute;
+  mix-blend-mode: overlay;
+  font-size: 50px;
+  font-weight: bold;
+}
+
 .wrapper-darkModeToggle {
   display: -webkit-box;
   display: -ms-flexbox;

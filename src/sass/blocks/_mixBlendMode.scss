@@ -1,0 +1,13 @@
+.wrapper-mixBlendMode {
+    position: relative;
+    display: flex;
+}
+.img-mixBlendMode {
+    width: 100%;
+}
+.h2-mixBlendMode {
+    position: absolute;
+    mix-blend-mode: overlay;
+    font-size: 50px;
+    font-weight: bold;
+}
